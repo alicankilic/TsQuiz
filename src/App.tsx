@@ -56,8 +56,8 @@ const App = () => {
           Lets Start
         </button>
       ) : undefined}
-      <p className="score">Score</p>
-      <p>Loading Questions ...</p>
+      {!gameOverState ? <p className="score">Score</p> : undefined}
+      {loadingState ? <p>Loading Questions ...</p> : undefined}
       {/* <QuestionCard 
       questionNumber = {numberState+1}
       totalQuestions={TOTALQUESTIONS}
